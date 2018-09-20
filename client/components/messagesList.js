@@ -11,7 +11,7 @@ class MessagesList extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/messages')
+    fetch('http://localhost:1337/messages')
       .then(response => response.json())
       .then(data => this.setState({ 'messages':data }));
   }
