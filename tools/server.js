@@ -32,6 +32,8 @@ const serverConfig = {
     'X-Frame-Options': 'SAMEORIGIN'
   }
 };
+var config = require('webpack.config');
+
 const server = new WebpackDevServer(compiler, serverConfig);
 
 server.use(require('webpack-hot-middleware')(compiler));
