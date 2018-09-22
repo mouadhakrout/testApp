@@ -1,2 +1,2 @@
 # medgo-test-app
-React SailsJs web App
+React SailsJs web Application
