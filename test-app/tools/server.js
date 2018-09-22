@@ -6,7 +6,9 @@ import WebpackDevServer from 'webpack-dev-server';
 import webpackConfig from '../webpack.config.dev';
 
 const compiler = webpack(webpackConfig);
-
+const environment = process.env.NODE_ENV || 'development';
+let proxy ='';
+environment=='development'?proxy = 'http://localhost:1337':proxy ='https://shielded-harbor-46054.herokuapp.com';
 const serverConfig = {
   contentBase: path.resolve(__dirname, '../client'),
   hot: true,
@@ -17,7 +19,11 @@ const serverConfig = {
   publicPath: webpackConfig.output.publicPath,
   historyApiFallback: true,
   proxy: {
-    '/api/*': 'http://127.0.0.1:1337'
+   '/api/**': {
+        target: proxy,
+        secure: false,
+        changeOrigin: true,
+      }
   },
   headers: {
     'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -26,6 +32,7 @@ const serverConfig = {
     'X-Frame-Options': 'SAMEORIGIN'
   }
 };
+var config = require('webpack.config');
 
 const server = new WebpackDevServer(compiler, serverConfig);
 

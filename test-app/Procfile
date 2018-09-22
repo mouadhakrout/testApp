@@ -1,0 +1,1 @@
+"start: npm run build --parallel open:client lift"

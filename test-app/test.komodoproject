@@ -2,6 +2,8 @@
 <!-- Komodo Project File - DO NOT EDIT -->
 <project id="56e4da1a-5ace-4444-bd74-3e59e1972fa3" kpf_version="5" name="test.komodoproject">
 <preference-set idref="56e4da1a-5ace-4444-bd74-3e59e1972fa3" id="project" preftype="project">
+  <long id="codeintel.scanner.max_depth">10</long>
+  <string id="import_exclude_matches">*.*~;*.bak;*.tmp;CVS;.#*;*.pyo;*.pyc;.svn;_svn;.git;.hg;.bzr;*%25*;tmp*.html;.DS_Store;*.swp;*.kpf;*.komodoproject;.komodotools;__pycache__</string>
   <long id="prefs_version">1</long>
 </preference-set>
 </project>
