@@ -1,3 +1,2 @@
-# test-app
-Stack:React , Bootstrap , SailsJs
-a [Sails](http://sailsjs.org) application
+# medgo-test-app
+React SailsJs web App
